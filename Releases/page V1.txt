@@ -1,0 +1,272 @@
+
+const products = [
+  {
+    name: "Wireless Headphones",
+    category: "AUDIO",
+    price: "PKR 12,499",
+    oldPrice: "PKR 15,999",
+    emoji: "🎧",
+    background: "from-stone-200 to-stone-300",
+    tag: "BESTSELLER",
+  },
+  {
+    name: "Smart Watch Pro",
+    category: "WEARABLES",
+    price: "PKR 18,999",
+    oldPrice: "PKR 22,999",
+    emoji: "⌚",
+    background: "from-amber-100 to-stone-200",
+    tag: "POPULAR",
+  },
+  {
+    name: "Portable Speaker",
+    category: "AUDIO",
+    price: "PKR 8,499",
+    oldPrice: "",
+    emoji: "🔊",
+    background: "from-slate-200 to-slate-300",
+    tag: "NEW ARRIVAL",
+  },
+  {
+    name: "Wireless Earbuds",
+    category: "AUDIO",
+    price: "PKR 6,999",
+    oldPrice: "",
+    emoji: "🎵",
+    background: "from-orange-100 to-amber-200",
+    tag: "TRENDING",
+  },
+];
+
+const categories = [
+  { name: "Smartphones", emoji: "📱", count: "Explore mobiles" },
+  { name: "Audio", emoji: "🎧", count: "Explore sound" },
+  { name: "Wearables", emoji: "⌚", count: "Explore watches" },
+  { name: "Accessories", emoji: "⚡", count: "Everyday essentials" },
+];
+
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-[#f8f7f3] text-[#171714]">
+      {/* Announcement bar */}
+      <div className="bg-[#171714] px-4 py-2.5 text-center text-[10px] font-medium tracking-[0.2em] text-white sm:text-xs">
+        YOUR EVERYDAY UPGRADE STARTS HERE
+        <span className="mx-2 text-[#c6a76a]">✦</span>
+        SHOP CARTLAY
+      </div>
+
+      {/* Navigation */}
+      <header className="sticky top-0 z-50 border-b border-black/5 bg-[#f8f7f3]/95 backdrop-blur-md">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8">
+          <a href="#" className="text-3xl font-black tracking-[-0.08em]">
+            cartlay<span className="text-[#b18b4b]">.</span>
+          </a>
+
+          <nav className="hidden items-center gap-9 text-xs font-semibold tracking-[0.12em] text-[#55544f] md:flex">
+            <a href="#home" className="transition hover:text-[#b18b4b]">HOME</a>
+            <a href="#categories" className="transition hover:text-[#b18b4b]">CATEGORIES</a>
+            <a href="#products" className="transition hover:text-[#b18b4b]">SHOP</a>
+            <a href="#about" className="transition hover:text-[#b18b4b]">ABOUT</a>
+          </nav>
+
+          <a
+            href="#products"
+            className="border border-[#171714] px-5 py-3 text-[10px] font-bold tracking-[0.15em] transition hover:bg-[#171714] hover:text-white"
+          >
+            EXPLORE SHOP
+          </a>
+        </div>
+      </header>
+
+      {/* Hero section */}
+      <section id="home" className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-2 lg:py-28">
+        <div>
+          <div className="mb-7 flex items-center gap-3">
+            <span className="h-px w-10 bg-[#b18b4b]" />
+            <p className="text-[10px] font-bold tracking-[0.3em] text-[#9b7941]">
+              THE CARTLAY EDIT
+            </p>
+          </div>
+
+          <h1 className="max-w-xl text-5xl font-semibold leading-[1.08] tracking-[-0.055em] sm:text-7xl">
+            Everyday,
+            <br />
+            <span className="font-light italic text-[#a98a58]">elevated.</span>
+          </h1>
+
+          <p className="mt-7 max-w-md text-sm leading-7 text-[#77756e] sm:text-base">
+            Discover technology that makes life better. Thoughtfully selected
+            electronics, everyday essentials and products worth bringing home.
+          </p>
+
+          <div className="mt-10 flex flex-wrap items-center gap-5">
+            <a
+              href="#products"
+              className="bg-[#171714] px-8 py-4 text-[10px] font-bold tracking-[0.18em] text-white transition hover:bg-[#9b7941]"
+            >
+              SHOP THE COLLECTION <span className="ml-3">→</span>
+            </a>
+            <a
+              href="#categories"
+              className="text-xs font-semibold text-[#55544f] underline decoration-[#b18b4b] underline-offset-8"
+            >
+              Discover categories
+            </a>
+          </div>
+
+          <div className="mt-16 flex gap-10 border-t border-black/10 pt-7">
+            <div>
+              <p className="text-xl font-semibold tracking-tight">Curated</p>
+              <p className="mt-1 text-[9px] tracking-[0.18em] text-[#8b8981]">PRODUCT SELECTION</p>
+            </div>
+            <div>
+              <p className="text-xl font-semibold tracking-tight">Everyday</p>
+              <p className="mt-1 text-[9px] tracking-[0.18em] text-[#8b8981]">USEFUL INNOVATION</p>
+            </div>
+            <div>
+              <p className="text-xl font-semibold tracking-tight">Cartlay</p>
+              <p className="mt-1 text-[9px] tracking-[0.18em] text-[#8b8981]">EVERYDAY, SORTED.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Hero artwork */}
+        <div className="relative mx-auto w-full max-w-xl">
+          <div className="absolute -right-3 -top-3 h-full w-full border border-[#b18b4b]/40 sm:-right-5 sm:-top-5" />
+          <div className="relative flex aspect-[5/4] items-center justify-center overflow-hidden bg-gradient-to-br from-[#e9e4d9] via-[#d7cdbb] to-[#b6a68c]">
+            <div className="absolute left-8 top-8 text-[9px] font-bold tracking-[0.25em] text-[#62594b]">
+              CARTLAY / 001
+            </div>
+            <div className="absolute bottom-8 right-8 text-[9px] tracking-[0.2em] text-[#62594b]">
+              EVERYDAY, SORTED.
+            </div>
+            <div className="absolute h-64 w-64 rounded-full border border-white/40 sm:h-80 sm:w-80" />
+            <div className="absolute h-48 w-48 rounded-full border border-white/40 sm:h-64 sm:w-64" />
+            <div className="relative flex h-40 w-40 rotate-[-12deg] items-center justify-center rounded-[2.5rem] border border-white/50 bg-gradient-to-br from-[#33332f] to-[#10100f] shadow-2xl sm:h-52 sm:w-52">
+              <div className="absolute inset-3 rounded-[2rem] border border-white/10" />
+              <span className="text-8xl drop-shadow-lg sm:text-9xl">🎧</span>
+            </div>
+            <div className="absolute bottom-12 left-8 rounded-full border border-white/50 bg-white/50 px-4 py-2 text-[9px] font-semibold tracking-[0.15em] text-[#514a3e] backdrop-blur-sm">
+              TECHNOLOGY, REIMAGINED
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Category section */}
+      <section id="categories" className="border-y border-black/5 bg-[#f0eee8]">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+          <div className="mb-9 flex items-end justify-between">
+            <div>
+              <p className="text-[10px] font-bold tracking-[0.25em] text-[#a17f49]">EXPLORE CARTLAY</p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-[-0.04em]">Shop by category</h2>
+            </div>
+            <span className="hidden text-xs text-[#858279] sm:block">Find your everyday essentials →</span>
+          </div>
+
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+            {categories.map((category) => (
+              <a
+                key={category.name}
+                href="#products"
+                className="group border border-black/5 bg-[#f8f7f3] p-6 transition hover:-translate-y-1 hover:border-[#b18b4b]/50 sm:p-8"
+              >
+                <span className="text-4xl">{category.emoji}</span>
+                <h3 className="mt-8 text-sm font-semibold">{category.name}</h3>
+                <p className="mt-2 text-[10px] text-[#858279]">{category.count}</p>
+                <p className="mt-5 text-sm text-[#a17f49] transition group-hover:translate-x-1">↗</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Products */}
+      <section id="products" className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
+        <div className="mb-10 flex flex-wrap items-end justify-between gap-5">
+          <div>
+            <p className="text-[10px] font-bold tracking-[0.25em] text-[#a17f49]">THE GOOD STUFF</p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
+              Featured products
+            </h2>
+            <p className="mt-3 text-sm text-[#858279]">A little something for every day.</p>
+          </div>
+          <span className="text-xs font-semibold text-[#9b7941]">THE CARTLAY COLLECTION ↗</span>
+        </div>
+
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
+          {products.map((product) => (
+            <article key={product.name} className="group">
+              <div className={`relative flex aspect-[4/5] items-center justify-center overflow-hidden bg-gradient-to-br ${product.background}`}>
+                <span className="absolute left-3 top-3 bg-[#f8f7f3] px-2.5 py-1.5 text-[8px] font-bold tracking-[0.12em]">
+                  {product.tag}
+                </span>
+                <span className="text-7xl drop-shadow-md transition duration-500 group-hover:scale-110 sm:text-8xl">
+                  {product.emoji}
+                </span>
+                <span className="absolute bottom-3 right-3 text-[9px] font-semibold tracking-widest text-black/40">
+                  CARTLAY
+                </span>
+              </div>
+              <div className="pt-4">
+                <p className="text-[9px] font-bold tracking-[0.18em] text-[#a17f49]">{product.category}</p>
+                <h3 className="mt-2 text-xs font-semibold sm:text-sm">{product.name}</h3>
+                <div className="mt-3 flex flex-wrap items-center gap-2">
+                  <span className="text-xs font-bold">{product.price}</span>
+                  {product.oldPrice && (
+                    <span className="text-[10px] text-[#99958b] line-through">{product.oldPrice}</span>
+                  )}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+        <p className="mt-8 text-center text-[10px] text-[#99958b]">
+          Illustrative products and prices for the initial storefront design.
+        </p>
+      </section>
+
+      {/* Brand statement */}
+      <section id="about" className="bg-[#171714] px-5 py-20 text-center text-white sm:py-28">
+        <p className="text-[10px] font-bold tracking-[0.3em] text-[#c6a76a]">A BETTER WAY TO SHOP</p>
+        <h2 className="mx-auto mt-6 max-w-3xl text-4xl font-medium leading-tight tracking-[-0.05em] sm:text-6xl">
+          Good choices.
+          <br />
+          <span className="font-light italic text-[#c6a76a]">Every single day.</span>
+        </h2>
+        <p className="mx-auto mt-6 max-w-md text-sm leading-7 text-white/50">
+          We're building a destination for products that earn their place in
+          your everyday life.
+        </p>
+        <a
+          href="#products"
+          className="mt-9 inline-block border border-[#c6a76a] px-8 py-4 text-[10px] font-bold tracking-[0.18em] text-[#e3c995] transition hover:bg-[#c6a76a] hover:text-[#171714]"
+        >
+          DISCOVER CARTLAY
+        </a>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-[#f8f7f3] px-5 py-10 sm:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 border-b border-black/10 pb-9 sm:flex-row sm:items-center">
+          <div>
+            <a href="#" className="text-3xl font-black tracking-[-0.08em]">
+              cartlay<span className="text-[#b18b4b]">.</span>
+            </a>
+            <p className="mt-2 text-[10px] tracking-[0.16em] text-[#858279]">EVERYDAY, SORTED.</p>
+          </div>
+          <div className="flex flex-wrap gap-6 text-[10px] font-semibold tracking-[0.12em] text-[#77756e]">
+            <a href="#home" className="hover:text-[#b18b4b]">HOME</a>
+            <a href="#categories" className="hover:text-[#b18b4b]">CATEGORIES</a>
+            <a href="#products" className="hover:text-[#b18b4b]">SHOP</a>
+            <a href="#about" className="hover:text-[#b18b4b]">ABOUT</a>
+          </div>
+        </div>
+        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-3 pt-6 text-[10px] text-[#99958b] sm:flex-row">
+          <p>© 2026 Cartlay. All rights reserved.</p>
+          <p>Made for everyday living.</p>
+        </div>
+      </footer>
+    </main>
+  );
+}
